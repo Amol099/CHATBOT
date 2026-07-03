@@ -1,5 +1,4 @@
-````text
-🤖 Falcon-7B AI Chatbot
+# Falcon-7B AI Chatbot
 
 A conversational AI chatbot powered by Falcon-7B-Instruct using the Hugging Face Transformers library and PyTorch.
 

@@ -1,92 +1,128 @@
-# Falcon-7B AI Chatbot
+<div align="center">
 
-A conversational AI chatbot powered by Falcon-7B-Instruct using the Hugging Face Transformers library and PyTorch.
+<!-- 🦅 ───────────────────────────────────────────── 🦅 -->
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)
-![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-red?style=for-the-badge&logo=pytorch)
-![Transformers](https://img.shields.io/badge/HuggingFace-Transformers-yellow?style=for-the-badge&logo=huggingface)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+# 🦅 Falcon-7B AI Chatbot
 
----
+### *A conversational AI that remembers what you said.*
 
-🚀 Overview
+An interactive terminal chatbot powered by **Falcon-7B-Instruct**,
+built with Hugging Face Transformers and PyTorch.
 
-This project is an interactive AI chatbot built using the Falcon-7B-Instruct Large Language Model.
+<br>
 
-The chatbot maintains conversation history, generates context-aware responses, and leverages GPU acceleration for fast inference.
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-Deep_Learning-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![Transformers](https://img.shields.io/badge/🤗_Transformers-Hugging_Face-FFD21E?style=for-the-badge&logoColor=black)
+![License](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)
 
-It demonstrates how to build a terminal-based conversational assistant using Hugging Face Transformers.
+<br>
 
----
+[**Features**](#-features) •
+[**Quick start**](#-quick-start) •
+[**Demo**](#-example-conversation) •
+[**How it works**](#-how-it-works) •
+[**Roadmap**](#-roadmap) •
+[**Contributing**](#-contributing)
 
-✨ Features
+</div>
 
-• 💬 Interactive terminal chatbot
-
-• 🧠 Powered by Falcon-7B-Instruct
-
-• ⚡ GPU acceleration using PyTorch
-
-• 🔥 Context-aware conversation memory
-
-• 🎯 Top-K text sampling
-
-• 📝 Dynamic prompt generation
-
-• 🤗 Hugging Face Transformers integration
+<br>
 
 ---
 
-🛠️ Tech Stack
+## 🚀 Overview
 
-Python
+This project is an interactive AI chatbot built on the **Falcon-7B-Instruct**
+large language model.
 
-PyTorch
-
-Hugging Face Transformers
-
-Falcon-7B-Instruct
-
-CUDA (Optional GPU)
+It keeps track of the conversation, generates **context-aware responses**, and
+uses **GPU acceleration** for fast inference — a compact, readable example of
+how to build a terminal-based conversational assistant with Hugging Face
+Transformers.
 
 ---
 
-📂 Project Structure
+## ✨ Features
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>💬 Terminal Chat</h3>
+      A simple, interactive chatbot that runs right in your terminal.
+    </td>
+    <td width="50%" valign="top">
+      <h3>🧠 Falcon-7B-Instruct</h3>
+      Powered by a capable open-source instruction-tuned LLM.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>⚡ GPU Accelerated</h3>
+      Fast inference with PyTorch and CUDA (optional).
+    </td>
+    <td width="50%" valign="top">
+      <h3>🔥 Conversation Memory</h3>
+      Context-aware replies that build on earlier messages.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🎯 Top-K Sampling</h3>
+      Varied, natural-sounding text generation.
+    </td>
+    <td width="50%" valign="top">
+      <h3>📝 Dynamic Prompts</h3>
+      Prompts are built on the fly from the chat history.
+    </td>
+  </tr>
+</table>
+
+---
+
+## 🛠️ Tech Stack
+
+<div align="center">
+
+| 🐍 Python | 🔥 PyTorch | 🤗 Transformers | 🦅 Falcon-7B-Instruct | 🟩 CUDA *(optional)* |
+|:-:|:-:|:-:|:-:|:-:|
+
+</div>
+
+---
+
+## 📂 Project Structure
 
 ```text
 Falcon-Chatbot/
 │
-├── chatbot.py
-├── requirements.txt
-├── README.md
-└── assets/
+├── 🐍 chatbot.py          # Main chatbot script
+├── 📋 requirements.txt    # Python dependencies
+├── 📖 README.md           # You are here
+└── 🖼️ assets/             # Images and media
 ```
 
 ---
 
-📦 Installation
+## 🚀 Quick Start
 
-Clone the repository
+### 1️⃣ Clone the repository
 
 ```bash
 git clone https://github.com/yourusername/Falcon-Chatbot.git
-```
-
-Move into the project
-
-```bash
 cd Falcon-Chatbot
 ```
 
-Install dependencies
+### 2️⃣ Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
+<details>
+<summary><b>📥 Required packages / manual install</b></summary>
 
-📥 Required Packages
+<br>
 
 ```txt
 torch
@@ -95,15 +131,19 @@ accelerate
 sentencepiece
 ```
 
-Or install manually
+Or install them directly:
 
 ```bash
 pip install torch transformers accelerate sentencepiece
 ```
 
----
+</details>
 
-▶️ Run the Chatbot
+> [!TIP]
+> A 7B model in `bfloat16` needs roughly **14–16 GB of GPU memory**. A CUDA GPU
+> is strongly recommended — running on CPU works but is much slower.
+
+### 3️⃣ Run the chatbot
 
 ```bash
 python chatbot.py
@@ -111,7 +151,7 @@ python chatbot.py
 
 ---
 
-💻 Example Conversation
+## 💻 Example Conversation
 
 ```text
 > Hello
@@ -122,101 +162,109 @@ Hello! How can I assist you today?
 > Explain Artificial Intelligence.
 
 Bob:
-Artificial Intelligence (AI) is a field of computer science focused on creating systems that can perform tasks requiring human intelligence, such as learning, reasoning, and decision-making.
+Artificial Intelligence (AI) is a field of computer science focused on creating
+systems that can perform tasks requiring human intelligence, such as learning,
+reasoning, and decision-making.
 
 > Give me an example.
 
 Bob:
-A virtual assistant like ChatGPT or Siri is an example of AI that understands natural language and responds to user queries.
+A virtual assistant like ChatGPT or Siri is an example of AI that understands
+natural language and responds to user queries.
 ```
 
 ---
 
-⚙️ Model Configuration
+## ⚙️ Model Configuration
 
 ```python
 model = "tiiuae/falcon-7b-instruct"
 ```
 
-The chatbot uses
-
-• Falcon-7B-Instruct
-
-• AutoTokenizer
-
-• Hugging Face Pipeline
-
-• torch.bfloat16
-
-• device_map="auto"
+| Component | Setting |
+|---|---|
+| 🦅 **Model** | Falcon-7B-Instruct |
+| 🔤 **Tokenizer** | `AutoTokenizer` |
+| 🔗 **Interface** | Hugging Face `pipeline` |
+| 🎚️ **Precision** | `torch.bfloat16` |
+| 🖥️ **Device** | `device_map="auto"` |
 
 ---
 
-🧠 How It Works
+## 🧠 How It Works
 
-1. Load Falcon-7B model.
-2. Initialize tokenizer.
-3. Create a text-generation pipeline.
-4. Accept user input.
-5. Store conversation history.
-6. Generate AI response.
-7. Continue conversation until the program is stopped.
+```mermaid
+flowchart LR
+    A([🦅 Load Falcon-7B]) --> B[🔤 Init tokenizer]
+    B --> C[🔗 Build text-generation pipeline]
+    C --> D([⌨️ User input])
+    D --> E[(💾 Conversation history)]
+    E --> F{{🧠 Generate response}}
+    F --> G([💬 Bob replies])
+    G --> E
+    G -.->|loop until stopped| D
+```
 
----
-
-📈 Future Improvements
-
-• Web Interface (Streamlit)
-
-• Voice Assistant
-
-• Chat History Export
-
-• LangChain Integration
-
-• RAG (Retrieval-Augmented Generation)
-
-• PDF Question Answering
-
-• Memory Database
-
-• Multi-language Support
+1. **Load** the Falcon-7B model
+2. **Initialize** the tokenizer
+3. **Create** a text-generation pipeline
+4. **Accept** user input
+5. **Store** the conversation history
+6. **Generate** the AI response
+7. **Repeat** until the program is stopped
 
 ---
 
-🎯 Learning Outcomes
+## 📈 Roadmap
 
-This project demonstrates
-
-• Large Language Models (LLMs)
-
-• Prompt Engineering
-
-• Text Generation
-
-• Hugging Face Pipelines
-
-• Context Management
-
-• AI Chatbot Development
-
-• GPU Inference Optimization
+- [ ] 🌐 Web interface (Streamlit)
+- [ ] 🎙️ Voice assistant
+- [ ] 📤 Chat history export
+- [ ] 🔗 LangChain integration
+- [ ] 📚 RAG (Retrieval-Augmented Generation)
+- [ ] 📄 PDF question answering
+- [ ] 🗄️ Memory database
+- [ ] 🌍 Multi-language support
 
 ---
 
-🤝 Contributing
+## 🎯 Learning Outcomes
 
-Contributions, suggestions, and improvements are welcome.
+This project is a hands-on introduction to:
 
-Feel free to fork this repository and submit a pull request.
+| | |
+|---|---|
+| 🤖 **Large Language Models** | Working with an open-source LLM |
+| ✍️ **Prompt Engineering** | Shaping prompts from conversation history |
+| 📝 **Text Generation** | Sampling strategies such as Top-K |
+| 🔗 **Hugging Face Pipelines** | The fastest way to run a model |
+| 🧩 **Context Management** | Keeping chats coherent over many turns |
+| ⚡ **GPU Inference** | Precision and device placement for speed |
 
 ---
 
-📜 License
+## 🤝 Contributing
 
-This project is licensed under the MIT License.
+Contributions, suggestions, and improvements are welcome!
+
+1. 🍴 **Fork** this repository
+2. 🌿 Create a branch: `git checkout -b feature/your-feature-name`
+3. 💾 Commit your changes: `git commit -m "Describe your change"`
+4. 🚀 Push: `git push origin feature/your-feature-name`
+5. 📬 Open a **pull request**
 
 ---
 
-⭐ If you found this project helpful, don't forget to star the repository!
-````
+## 📜 License
+
+Licensed under the **MIT License**.
+
+---
+
+<div align="center">
+
+### ⭐ If you found this project helpful, give it a star!
+
+<sub>Built with ☕ and curiosity 🧠</sub>
+
+</div>
